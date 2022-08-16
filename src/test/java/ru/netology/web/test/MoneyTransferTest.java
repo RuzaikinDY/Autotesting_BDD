@@ -55,15 +55,15 @@ class MoneyTransferTest {
 
   }
 
-//  @Test
-//  void TransferMoneyFirstToSecondCardOverLimit() {
-//    int value = 500;
-//    String cardNumber = String.valueOf(DataHelper.getSecondCardNumber());
-//    val dashboardPage = new DashboardPage();
-//    var secondCardBalance = dashboardPage.getSecondCardBalance();
-//    dashboardPage.transferButtonSecondToFirst();
-//    val transferPage = new TransferPage();
-//    transferPage.importTransferData(value + secondCardBalance, cardNumber);
-//    transferPage.getNotification();
-//  }
+  @Test
+  void TransferMoneyFirstToSecondCardOverLimit() {
+    int value = 500;
+    String cardNumber = String.valueOf(DataHelper.getSecondCardNumber());
+    val dashboardPage = new DashboardPage();
+    var secondCardBalance = dashboardPage.getSecondCardBalance();
+    dashboardPage.transferButtonSecondToFirst();
+    val transferPage = new TransferPage();
+    transferPage.importTransferData(value + secondCardBalance, cardNumber);
+    transferPage.getNotification();
+  }
 }
